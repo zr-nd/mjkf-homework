@@ -1,0 +1,238 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OASIS</title>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+<!--    <link rel="stylesheet"  type="text/css" href="/css/index.css">&lt;!&ndash;原有样式,部分内容被searchPage覆盖&ndash;&gt;-->
+    <link rel="stylesheet"  type="text/css" href="/css/searchPage.css">
+    <script src="https://cdn.bootcss.com/echarts/4.6.0/echarts-en.common.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat/dist/ecStat.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/dataTool.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/china.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/world.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/bmap.min.js"></script>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/index.js"></script>
+
+</head>
+<body>
+    <div class="container1">
+        <div id="back">
+            <div class="top"><!--顶部-->
+                <ul class="navlist">
+                    <li id="rank1"><img src="/images/BarChart.png" style="height:25px;width:25px;vertical-align:middle"><a href="rank" target="_blank" style="vertical-align: middle;">学术排名</a></li>
+                    <li id="signUp"><img src="/images/internship.png" style="height:25px;width:25px;vertical-align:middle"><a href="link1" target="_blank" style="vertical-align: middle;">关系图谱</a></li>
+                    <li id="hot"><img src="/images/fire.png" style="height:25px;width:25px;vertical-align:middle"><a href="#" style="vertical-align: middle;">热点展示</a>
+                        <div>
+                            <a href="link" target="_blank">机构合作</a>
+                            <a href="hotPapers" target="_blank">热门论文</a>
+                            <a href="hotFields" target="_blank">热点研究</a>
+                        </div>
+                    </li>
+<!--                    <li class="site-name">OASIS</li>-->
+                    <li id="searching">
+                        <form method="post" class="searcher" onsubmit="return false">
+                            <!--<span id="search-block">搜索栏</span>--><input id="write" type="text" placeholder="组合条件可使用&" style="border-radius:5px;"><button type="button" id="search">搜索</button>
+                            </br>
+                        </form>
+                    </li>
+
+                </ul>
+
+<!--                    <div class="search-container">&lt;!&ndash;搜索框和搜索结果栏&ndash;&gt;-->
+
+<!--                        <div class="adv-searcher">-->
+<!--                            &lt;!&ndash;<button type="button" id="advanced-search">高级搜索</button>&lt;!&ndash;高级搜索按钮，支持组合tag&ndash;&gt;-->
+<!--        &lt;!&ndash;                    <button type="button" id="return" hidden="hidden">返回首页</button>&ndash;&gt;-->
+<!--                            <button type="button" id="hot-searches">热点展示</button>用于展示感兴趣的数据结果&ndash;&gt;-->
+<!--                        </div>-->
+<!--                        <div class="table-container">-->
+<!--                            <table class="table" id="three">-->
+<!--                                <tbody id = "one">-->
+
+<!--                                </tbody>-->
+<!--                            </table>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+<!--                <ul id="biaoqian">-->
+<!--                    <li><a href="rank" id="rank1">学术排名系统</a></li>-->
+<!--                    <li><a href="#" id="signUp">管理员登录</a></li>-->
+<!--                </ul>-->
+<!--                <div class="Form" id="signForm">-->
+<!--                    <form method="post">-->
+<!--                        <p  class="namepwd">用户名:<input type="text" id="username"><br></p>-->
+<!--                        <p  class="namepwd">密&emsp;码:<input type="password" id="pwd"><br></p>-->
+<!--                        <p  class="namepwd"><button type="button" id="btn">登录</button></p>-->
+<!--                    </form>-->
+
+<!--                </div>-->
+<!--                <div class="Form" id="fileForm">-->
+<!--                    <form>-->
+<!--                        <p  class="namepwd">文件路径：<input type="text" id="filepath"></p>-->
+<!--                        <p  class="namepwd"><button type="button" id="btn1">确认</button></p>-->
+<!--                    </form>-->
+<!--                </div>-->
+
+            </div>
+
+            <div class="title-container"><!--标题部分-->
+                <div id="title-content">
+                     <h1 class="search-title">Online grAph System for AcdemIcS</h1>
+                </div>
+
+            </div>
+<!--            <div class="search-container">&lt;!&ndash;搜索框和搜索结果栏&ndash;&gt;-->
+<!--                <form method="post" class="searcher">-->
+<!--                    &lt;!&ndash;<span id="search-block">搜索栏</span>&ndash;&gt;<input id="write" type="text"><button type="button" id="search">搜索</button>-->
+<!--                    </br>-->
+<!--                </form>-->
+<!--                <div class="adv-searcher">-->
+<!--                    &lt;!&ndash;<button type="button" id="advanced-search">高级搜索</button>&lt;!&ndash;高级搜索按钮，支持组合tag&ndash;&gt;-->
+<!--&lt;!&ndash;                    <button type="button" id="return" hidden="hidden">返回首页</button>&ndash;&gt;-->
+<!--                    <button type="button" id="hot-searches">热点展示</button>用于展示感兴趣的数据结果&ndash;&gt;-->
+<!--                </div>-->
+<!--                <div class="table-container">-->
+<!--                    <table class="table" id="three">-->
+<!--                        <tbody id = "one">-->
+
+<!--                        </tbody>-->
+<!--                    </table>-->
+<!--                </div>-->
+<!--            </div>-->
+        </div>
+
+        <div id="wrap">
+            <div class="Pic-Table" id="div1" style="width:24%; background: white; box-shadow: darkgrey 0px 0px 10px 5px;">
+                <table class="rank" style="margin: 0 auto">
+                    <div  class="ranking">
+                        <p>TOP AUTHOR</p>
+                    </div>
+                    <thead>
+                    <tr>
+                        <th scope="col">作者姓名</th>
+                        <th scope="col" class="right-number" >活跃度</th>
+                    </tr>
+                    </thead>
+                    <tbody id="seven">
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="Pic-Table" id="div2" style="width:24%;background: white;box-shadow: darkgrey 0px 0px 10px 5px;">
+                <table class="rank" style="margin: 0 auto">
+                    <div  class="ranking">
+                        <p>TOP AFFILIATION</p>
+                    </div>
+                    <thead>
+                    <tr>
+                        <th scope="col">机构</th>
+                        <th scope="col" class="right-number" style="white-space: nowrap">活跃度</th>
+                    </tr>
+                    </thead>
+                    <tbody id="eight">
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="Pic-Table" id="div3" style="width:24%;background: white;box-shadow: darkgrey 0px 0px 10px 5px;">
+                <table class="rank" style="margin: 0 auto">
+                    <div  class="ranking">
+                        <p>TOP FIELDS</p>
+                    </div>
+                    <thead>
+                    <tr>
+                        <th scope="col">研究方向</th>
+                        <th scope="col" class="right-number">活跃度</th>
+                    </tr>
+                    </thead>
+                    <tbody id="nine">
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="home-top-conference" style="width:24%;background: white;box-shadow: darkgrey 0px 0px 10px 5px;">
+                <table class="rank">
+                    <div class="ranking">
+                        <p>TOP CONFERENCE</p>
+                    </div>
+                    <thead id="confer-head">
+                    <tr>
+                        <th scope="col">会议</th>
+                        <th scope="col" class="right-number" style="white-space: nowrap">论文</th>
+                    </tr>
+                    </thead>
+                    <tbody id="top-confer-content">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+<!--        <div id="wrap1">-->
+<!--            Something Interesting-->
+<!--        </div>-->
+
+<!--        <div id="wrap2">-->
+<!--            <div class="sth-interes" id="container2" style="width:600px; height: 500px;background: white; box-shadow: darkgrey 0px 0px 10px 5px;">-->
+<!--                <img src="/images/link1.JPG" width="100%" height="100%">-->
+<!--                <p style="font-size: 25px;text-align: center;"><a href="link1" target="_blank">学术关系图</a></p>-->
+<!--            </div>-->
+<!--            <div class="sth-interes" id="container3" style="width:600px; height: 500px;background: white; box-shadow: darkgrey 0px 0px 10px 5px;">-->
+<!--                <img src="/images/link2.JPG"  width="100%" height="100%">-->
+<!--                <p style="font-size: 25px;text-align: center;"><a href="link" target="_blank">机构合作图</a></p>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--&lt;!&ndash;        <div class="hot-search-container" >&lt;!&ndash;兴趣点结果展示栏&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;            <div style="display: inline-block;width:600px; height: 500px;background: white; box-shadow: darkgrey 0px 0px 10px 5px;">&ndash;&gt;-->
+<!--&lt;!&ndash;                <div class="statistic-container" id="hot-search-ciyun">&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            <div style="display: inline-block;vertical-align: top;padding: 0;width:600px; height: 500px;background: white; box-shadow: darkgrey 0px 0px 10px 5px;">&ndash;&gt;-->
+<!--&lt;!&ndash;                &lt;!&ndash;<div id="paper-title">被引用次数最多的前十篇论文</div>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                <div class="statistic-container" id="paper-referCount">&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <div class="hot-search-container">&ndash;&gt;-->
+<!--&lt;!&ndash;            <div style="display: inline-block;width:600px; height: 500px;background: white; box-shadow: darkgrey 0px 0px 10px 5px;">&ndash;&gt;-->
+<!--&lt;!&ndash;                <div class="statistic-container" id="authorMost">&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            <div style="display: inline-block;vertical-align: top;padding: 0;width:600px; height: 500px;background: white; box-shadow: darkgrey 0px 0px 10px 5px;">&ndash;&gt;-->
+<!--&lt;!&ndash;                <div class="statistic-container" id="conference">&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--        <div class="hot-search-container" >&lt;!&ndash;兴趣点结果展示栏&ndash;&gt;-->
+<!--            <div class='statistic-container'>-->
+<!--                <div id="hot-search-ciyun"></div>-->
+<!--            </div>-->
+<!--            <div class='statistic-container' id="paper-referCount">-->
+<!--                &lt;!&ndash;<div id="paper-title">被引用次数最多的前十篇论文</div>&ndash;&gt;-->
+
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        <div class="hot-search-container">-->
+<!--            <div class='statistic-container' id="authorMost">-->
+
+<!--            </div>-->
+<!--            <div class='statistic-container' id="conference">-->
+
+<!--            </div>-->
+<!--        </div>-->
+
+    </div>
+    <div class="footer">
+    </div>
+</body>
+
+</html>

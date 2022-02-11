@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OASIS</title>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet"  type="text/css" href="/css/rank.css">
+    <link rel="stylesheet" href="/css/loading1.css" type="text/css">
+    <link rel="StyleSheet" href="/css/dtree.css" type="text/css" />
+
+    <script src="https://cdn.bootcss.com/echarts/4.6.0/echarts-en.common.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/js/dtree.js"></script>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/rank.js"></script>
+
+</head>
+<body>
+<div class="name">
+    <p class="site-name">OASIS-学术排名</p>
+    <a href="/" id="homepage">首页</a>
+</div>
+<div class="container" id="condition">
+    <div class="row">
+        <ul id="publisher">
+            <li style="font-size:30px;">出版社:</li>
+            <li><button type="button" class="btn btn-default btn-lg active">IEEE</button></li>
+            <li><button type="button" class="btn btn-default btn-lg ">THU</button></li>
+            <li><button type="button" class="btn btn-default btn-lg ">SCI</button></li>
+            <li><button type="button" class="btn btn-default btn-lg ">CCF</button></li>
+            <li><button type="button" class="btn btn-default btn-lg ">ACM</button></li>
+        </ul>
+    </div>
+<!--    <div class="row">-->
+<!--        <ul id="country">-->
+<!--            <li style="font-size:30px;">国家/地区:</li>-->
+<!--            <li>-->
+<!--                <button id="selectCountries" type="button" class="btn btn-default btn-lg active">-->
+<!--                    <select id="countriesList" style="border:0;background: transparent;">-->
+<!--                        <option value="All">全球</option>-->
+<!--                        <option value="China">中国</option>-->
+<!--                        <option value="USA">美国</option>-->
+<!--                        <option value="Japen">日本</option>-->
+<!--                        <option value="Koeran">韩国</option>-->
+<!--                        <option value="England">英国</option>-->
+<!--                        <option value="German">德国</option>-->
+<!--                        <option value="Franch">法国</option>-->
+<!--                        <option value="Europe">欧洲</option>-->
+<!--                        <option value="Asia">亚洲</option>-->
+<!--                        <option value="Canada">加拿大</option>-->
+<!--                        <option value="Australia">澳大利亚</option>-->
+<!--                        <option value="America">美洲</option>-->
+<!--                    </select>-->
+<!--                </button>-->
+<!--            </li>-->
+<!--            <li><button type="button" class="btn btn-default btn-lg single">中国</button></li>-->
+<!--            <li><button type="button" class="btn btn-default btn-lg single">美国</button></li>-->
+<!--            <li><button type="button" class="btn btn-default btn-lg single">日本</button></li>-->
+<!--            <li><button type="button" class="btn btn-default btn-lg single">欧洲</button></li>-->
+<!--        </ul>-->
+<!--    </div>-->
+    <div class="row">
+        <ul id="year">
+            <li style="font-size:30px;">年份:</li>
+            <li>
+                <button type="button" class="btn btn-default btn-lg active">
+                    <select id="startYear" style="border:0;background: transparent;">
+                        <option value="2010">2010</option>
+                        <option value="2011">2011</option>
+                        <option value="2012">2012</option>
+                        <option value="2013">2013</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                    </select>
+                </button>
+            </li>
+            <li style="font-size:30px;">到</li>
+            <li>
+                <button type="button" class="btn btn-default btn-lg active">
+                    <select id="endYear" style="border:0;background: transparent;">
+                        <option value="2010">2010</option>
+                        <option value="2011">2011</option>
+                        <option value="2012">2012</option>
+                        <option value="2013">2013</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                        <option value="2019" selected="selected">2019</option>
+                    </select>
+                </button>
+            </li>
+        </ul>
+    </div>
+<!--    <div class="row">-->
+<!--        <ul id="firstAuthor">-->
+<!--            <li style="font-size:30px;">是否第一作者:</li>-->
+<!--            <li><button type="button" class="btn btn-default btn-lg active">是</button></li>-->
+<!--            <li><button type="button" class="btn btn-default btn-lg ">否</button></li>-->
+<!--        </ul>-->
+<!--    </div>-->
+</div>
+<div class="container" style="margin:auto;width:100%;margin-top:30px;">
+    <div class="row" style="margin:auto;display: flex;justify-content: space-around;">
+        <div style="background-color: white;width:20%; height:500px;box-shadow: darkgrey 0px 0px 10px 5px;">
+            <div class="choose-field" align="center">
+                <p class="field">选择研究方向<br>
+                    <input type="text" id="selectField" placeholder="All">
+                    <button type="button" id="confirmField">确认</button>
+                </p>
+            </div>
+
+            <div class="dtree" id="dtree_div" align="left">
+                <script type="text/javascript">
+                    d = new dTree('d', true);   //参数一: 树名称。参数二：单选多选 true多选  false单选  默认单选
+                    // dTree实例属性以此为：  节点ID，父类ID，chechbox的名称，chechbox的值，chechbox的显示名称，
+                    //chechbox是否被选中--默认是不选，chechbox是否可用：默认是可用，节点链接：默认是虚链接
+                    d.add(0, -1, '会议');
+                    d.add(1, 0, 'conference', '0001', 'All', true, false);
+                    d.add(2, 1, 'conference', '0002', 'ASE', true, false);
+                    d.add(3, 1, 'conference', '0003', 'ICSE', true, false);
+                    //d.add(4, 1, 'conference', '0004', '其他', true, false);
+                    document.write(d);
+                    d.openAll();
+                </script>
+            </div>
+        </div>
+
+        <div style="background-color: white;width:70%; height:100%;margin-bottom:5%;box-shadow: darkgrey 0px 0px 10px 5px;">
+            <table class="rank" style="margin: 0 auto">
+                <div class="ranking" style="display: flex;justify-content: space-around;height:60px;">
+                    <div class="category" style="background-color:darkgrey;width:50%;margin: 0px;text-align: center">科研机构</div>
+                    <div class="category" style="width:50%;margin:0px;text-align: center">
+                        杰出学者
+                    </div>
+                </div>
+                <thead>
+                <tr>
+                    <th scope="col">名字</th>
+                    <th class="amount" scope="col" style="color:blue;white-space: nowrap">论文数</th>
+                    <th class="amount" scope="col" style="white-space: nowrap">引用数</th>
+                    <th scope="col" style="white-space: nowrap">发表趋势</th>
+                </tr>
+                </thead>
+                <tbody id="ranking">
+<!--                <tr>-->
+<!--                    <td>Nanjing University</td>-->
+<!--                    <td>1854</td>-->
+<!--                    <td>8556</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td>Nanjing University</td>-->
+<!--                    <td>1854</td>-->
+<!--                    <td>8556</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td>Nanjing University</td>-->
+<!--                    <td>1854</td>-->
+<!--                    <td>8556</td>-->
+<!--                </tr>-->
+                </tbody>
+            </table>
+
+            <div class="sk-three-bounce" id="sk-three-bounce">
+                <div class="sk-child sk-bounce1"></div>
+                <div class="sk-child sk-bounce2"></div>
+                <div class="sk-child sk-bounce3"></div>
+            </div>
+
+            <div class="pages" align="center" style="margin-top:20px;margin-bottom:10px">
+                <ul class="pagination">
+                    <li><a class="hide" href="#" id="firstPage"><< 首页</a></li>
+                    <li><a class="hide" href="#" id="prePage">< 上一页</a></li>
+                    <li><a href="#" id="nextPage">下一页 ></a></li>
+                    <li><a href="#" id="lastPage">尾页 >></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

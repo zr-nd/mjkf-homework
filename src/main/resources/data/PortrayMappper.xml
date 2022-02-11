@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.oasis.dao.PortrayMapper">
+    <select id="selectResearch" resultType="com.example.oasis.po.Keyword">
+        select authorKeyWord as keyword,author_count,paper_count,referenceCount from research_field where authorKeyWord=#{keyword}
+    </select>
+
+    <select id="selectAuthorByField" resultType="com.example.oasis.vo.AuthorVO">
+        select author from fieldauthor where authorKeyWord=#{keyword}
+    </select>
+
+    <select id="selectTitleByField" resultType="com.example.oasis.vo.PaperVO">
+        select title from fieldpaper where authorKeyWord=#{keyword}
+    </select>
+
+    <select id="selectPopField" resultType="com.example.oasis.po.TopField">
+        select authorKeyWord,(0.5*author_count+0.3*paper_count+0.2*referenceCount) as active from research_field order by active desc limit 10
+    </select>
+
+    <select id="selectTopPaperinField" resultType="com.example.oasis.vo.PaperVO">
+        select * from paper p where p.title in (select f.title from fieldpaper f where f.authorKeyWord=#{keyword})  order by p.referenceCount desc limit 10
+    </select>
+
+    <select id="selectTopAuthorInField" resultType="com.example.oasis.po.TopAuthor">
+        select author,(0.7*paper_count+0.3*referenceCount) as active from fieldauthor where authorKeyWord=#{keyword} order by 0.7*paper_count+0.3*referenceCount desc limit 10
+    </select>
+
+    <select id="selectTopAffiliationInField" resultType="com.example.oasis.po.TopAffiliation">
+        select name,(0.5*author_count+0.3*paper_count+0.2*referenceCount) as active from fieldaffiliation where name!="NA" and authorKeyWord=#{keyword} order by 0.5*author_count+0.3*paper_count+0.2*referenceCount desc limit 10
+    </select>
+
+
+
+
+
+</mapper>

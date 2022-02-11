@@ -1,0 +1,133 @@
+-------------------------------------------------------------------------------
+Test set: com.example.oasis.serviceImpl.AuthorPicImplTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 11.464 s <<< FAILURE! - in com.example.oasis.serviceImpl.AuthorPicImplTest
+getAuthorPicByName  Time elapsed: 4.018 s  <<< ERROR!
+org.mybatis.spring.MyBatisSystemException: 
+nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+### The error may exist in file [E:\backend-webtest\target\classes\data\AuthorPicMapper.xml]
+### The error may involve com.example.oasis.dao.AuthorPicMapper.getAuthorPicByName
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.example.oasis.serviceImpl.AuthorPicImplTest.getAuthorPicByName(AuthorPicImplTest.java:91)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+### The error may exist in file [E:\backend-webtest\target\classes\data\AuthorPicMapper.xml]
+### The error may involve com.example.oasis.dao.AuthorPicMapper.getAuthorPicByName
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.example.oasis.serviceImpl.AuthorPicImplTest.getAuthorPicByName(AuthorPicImplTest.java:91)
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: 
+Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.example.oasis.serviceImpl.AuthorPicImplTest.getAuthorPicByName(AuthorPicImplTest.java:91)
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: 
+Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.example.oasis.serviceImpl.AuthorPicImplTest.getAuthorPicByName(AuthorPicImplTest.java:91)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: 
+Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.example.oasis.serviceImpl.AuthorPicImplTest.getAuthorPicByName(AuthorPicImplTest.java:91)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at com.example.oasis.serviceImpl.AuthorPicImplTest.getAuthorPicByName(AuthorPicImplTest.java:91)
+
+getPapersByAuthorPic  Time elapsed: 3.862 s  <<< ERROR!
+org.mybatis.spring.MyBatisSystemException: 
+nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+### The error may exist in file [E:\backend-webtest\target\classes\data\AuthorPicMapper.xml]
+### The error may involve com.example.oasis.dao.AuthorPicMapper.getPapersByAuthorPic
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.example.oasis.serviceImpl.AuthorPicImplTest.getPapersByAuthorPic(AuthorPicImplTest.java:107)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+### The error may exist in file [E:\backend-webtest\target\classes\data\AuthorPicMapper.xml]
+### The error may involve com.example.oasis.dao.AuthorPicMapper.getPapersByAuthorPic
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.example.oasis.serviceImpl.AuthorPicImplTest.getPapersByAuthorPic(AuthorPicImplTest.java:107)
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: 
+Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.example.oasis.serviceImpl.AuthorPicImplTest.getPapersByAuthorPic(AuthorPicImplTest.java:107)
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: 
+Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.example.oasis.serviceImpl.AuthorPicImplTest.getPapersByAuthorPic(AuthorPicImplTest.java:107)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: 
+Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.example.oasis.serviceImpl.AuthorPicImplTest.getPapersByAuthorPic(AuthorPicImplTest.java:107)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at com.example.oasis.serviceImpl.AuthorPicImplTest.getPapersByAuthorPic(AuthorPicImplTest.java:107)
+
+getAuthorPicByNameAndTitle  Time elapsed: 3.565 s  <<< ERROR!
+org.mybatis.spring.MyBatisSystemException: 
+nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+### The error may exist in file [E:\backend-webtest\target\classes\data\AuthorPicMapper.xml]
+### The error may involve com.example.oasis.dao.AuthorPicMapper.getAuthorPicByNameAndTitle
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.example.oasis.serviceImpl.AuthorPicImplTest.getAuthorPicByNameAndTitle(AuthorPicImplTest.java:99)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+### The error may exist in file [E:\backend-webtest\target\classes\data\AuthorPicMapper.xml]
+### The error may involve com.example.oasis.dao.AuthorPicMapper.getAuthorPicByNameAndTitle
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.example.oasis.serviceImpl.AuthorPicImplTest.getAuthorPicByNameAndTitle(AuthorPicImplTest.java:99)
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: 
+Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.example.oasis.serviceImpl.AuthorPicImplTest.getAuthorPicByNameAndTitle(AuthorPicImplTest.java:99)
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: 
+Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.example.oasis.serviceImpl.AuthorPicImplTest.getAuthorPicByNameAndTitle(AuthorPicImplTest.java:99)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: 
+Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.example.oasis.serviceImpl.AuthorPicImplTest.getAuthorPicByNameAndTitle(AuthorPicImplTest.java:99)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at com.example.oasis.serviceImpl.AuthorPicImplTest.getAuthorPicByNameAndTitle(AuthorPicImplTest.java:99)
+

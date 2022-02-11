@@ -1,0 +1,113 @@
+.name{
+    background:darkgrey;
+}
+ul li{
+    list-style-type: none;
+    float:left;
+    margin-right:20px;
+}
+
+ul li button{
+    outline: none !important;
+}
+
+.site-name{
+    font-size:48px;
+    text-decoration: none;
+    color:black;
+}
+.row{
+    margin-bottom: 20px;
+
+}
+#condition{
+    position:relative;
+    right:130px;
+    margin-top: 20px;
+}
+
+select{
+    outline: none !important;
+}
+
+.ranking{
+    text-align: center;
+    font-size:30px;
+}
+.rank
+{
+    text-align: left;
+    border-collapse: collapse;
+    border: 1px solid #69c;
+    width: 100%;
+}
+.rank th
+{
+    padding: 12px 17px 12px 17px;
+    font-weight: normal;
+    font-size: 20px;
+    color: black;
+    border-bottom: 1px dashed #69c;
+}
+.rank td
+{
+    font-size: 15px;
+    padding: 7px 17px 7px 17px;
+    color: black;
+}
+.rank tbody tr:hover td
+{
+    color: black;
+    background: #d0dafd;
+}
+.ranking p{
+    display:inline-table;
+}
+#homepage{
+    color:black;
+    text-decoration:none;
+    position:absolute;
+    right:30px;
+    top:20px;
+    font-size: 25px;
+}
+#homepage:hover{
+    background-color: lightblue;
+}
+
+.category:hover{
+    background-color: darkgrey !important;
+}
+
+.amount:hover{
+    color:blue !important;
+}
+
+.item{
+    height:50px;
+    border:#CCCCCC 1px solid;
+}
+
+ul.pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+ul.pagination li {display: inline;}
+
+ul.pagination li a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+ul.pagination li a.active {
+    background-color:#31b0d5;
+    color: white;
+    border-radius: 5px;
+}
+
+ul.pagination li a:hover:not(.active) {background-color: #ddd;}

@@ -1,0 +1,133 @@
+-------------------------------------------------------------------------------
+Test set: com.example.oasis.serviceImpl.PortrayTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 10.242 s <<< FAILURE! - in com.example.oasis.serviceImpl.PortrayTest
+selectTopAuthorInFieldTest  Time elapsed: 3.339 s  <<< ERROR!
+org.mybatis.spring.MyBatisSystemException: 
+nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+### The error may exist in file [E:\backend-webtest\target\classes\data\PortrayMappper.xml]
+### The error may involve com.example.oasis.dao.PortrayMapper.selectTopAuthorInField
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.example.oasis.serviceImpl.PortrayTest.selectTopAuthorInFieldTest(PortrayTest.java:129)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+### The error may exist in file [E:\backend-webtest\target\classes\data\PortrayMappper.xml]
+### The error may involve com.example.oasis.dao.PortrayMapper.selectTopAuthorInField
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.example.oasis.serviceImpl.PortrayTest.selectTopAuthorInFieldTest(PortrayTest.java:129)
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: 
+Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.example.oasis.serviceImpl.PortrayTest.selectTopAuthorInFieldTest(PortrayTest.java:129)
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: 
+Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.example.oasis.serviceImpl.PortrayTest.selectTopAuthorInFieldTest(PortrayTest.java:129)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: 
+Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.example.oasis.serviceImpl.PortrayTest.selectTopAuthorInFieldTest(PortrayTest.java:129)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at com.example.oasis.serviceImpl.PortrayTest.selectTopAuthorInFieldTest(PortrayTest.java:129)
+
+selectTopAffiliationInFieldTest  Time elapsed: 3.394 s  <<< ERROR!
+org.mybatis.spring.MyBatisSystemException: 
+nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+### The error may exist in file [E:\backend-webtest\target\classes\data\PortrayMappper.xml]
+### The error may involve com.example.oasis.dao.PortrayMapper.selectTopAffiliationInField
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.example.oasis.serviceImpl.PortrayTest.selectTopAffiliationInFieldTest(PortrayTest.java:187)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+### The error may exist in file [E:\backend-webtest\target\classes\data\PortrayMappper.xml]
+### The error may involve com.example.oasis.dao.PortrayMapper.selectTopAffiliationInField
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.example.oasis.serviceImpl.PortrayTest.selectTopAffiliationInFieldTest(PortrayTest.java:187)
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: 
+Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.example.oasis.serviceImpl.PortrayTest.selectTopAffiliationInFieldTest(PortrayTest.java:187)
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: 
+Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.example.oasis.serviceImpl.PortrayTest.selectTopAffiliationInFieldTest(PortrayTest.java:187)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: 
+Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.example.oasis.serviceImpl.PortrayTest.selectTopAffiliationInFieldTest(PortrayTest.java:187)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at com.example.oasis.serviceImpl.PortrayTest.selectTopAffiliationInFieldTest(PortrayTest.java:187)
+
+getKeywordPortrayTest  Time elapsed: 3.489 s  <<< ERROR!
+org.mybatis.spring.MyBatisSystemException: 
+nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+### The error may exist in file [E:\backend-webtest\target\classes\data\PortrayMappper.xml]
+### The error may involve com.example.oasis.dao.PortrayMapper.selectResearch
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.example.oasis.serviceImpl.PortrayTest.getKeywordPortrayTest(PortrayTest.java:32)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+### The error may exist in file [E:\backend-webtest\target\classes\data\PortrayMappper.xml]
+### The error may involve com.example.oasis.dao.PortrayMapper.selectResearch
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.example.oasis.serviceImpl.PortrayTest.getKeywordPortrayTest(PortrayTest.java:32)
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: 
+Failed to obtain JDBC Connection; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.example.oasis.serviceImpl.PortrayTest.getKeywordPortrayTest(PortrayTest.java:32)
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: 
+Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.example.oasis.serviceImpl.PortrayTest.getKeywordPortrayTest(PortrayTest.java:32)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: 
+Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.example.oasis.serviceImpl.PortrayTest.getKeywordPortrayTest(PortrayTest.java:32)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at com.example.oasis.serviceImpl.PortrayTest.getKeywordPortrayTest(PortrayTest.java:32)
+

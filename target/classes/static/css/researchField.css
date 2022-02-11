@@ -1,0 +1,54 @@
+body{
+    background:whitesmoke;
+}
+.container1{
+    width:auto;
+    height:auto;
+    margin:0 auto;
+}
+.top{
+    position:absolute;
+    top:0;
+    height: auto;
+    width:100%;
+    background:#069;
+    margin-bottom: 5px;
+}
+.top li{
+    list-style-type: none;
+}
+.site-name{
+    font-size:48px;
+    text-decoration: none;
+    color:whitesmoke;
+}
+.title-container{
+    margin-top:30px;
+    margin-bottom:10px;
+    text-align:center;
+    padding-top:105px;
+    font-size:32px;
+    color:sandybrown;
+    font-family:IBM Plex Serif,Arial,sans-serif;
+    text-shadow: 2px 2px 4px #000;
+}
+
+#return{
+    position: relative;
+    padding-left: 50px;
+    bottom: 50px;
+    font-size: 20px;
+
+}
+
+.fieldinf{
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-container{
+    background:white;box-shadow: darkgrey 0px 0px 10px 5px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+}

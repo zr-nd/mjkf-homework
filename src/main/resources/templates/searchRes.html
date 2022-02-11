@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OASIS</title>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet"  type="text/css" href="/css/index.css">
+    <script src="/js/jquery.js"></script>
+    <script src="/js/search.js"></script>
+    <script src="/js/page.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <div class="top"><!--顶部-->
+        <ul class="navlist">
+            <li class="site-name">OASIS-论文搜索</li>
+        </ul>
+        <a href="/" id="homepage">首页</a>
+    </div>
+    <div class="title-container"><!--标题部分-->
+        <span><i>Online grAph System for AcdemIcS</i></span>
+    </div>
+    <div id="return">
+        <a href="#" onclick="javascript:history.back(-1);" style="vertical-align: middle">返回</a>
+        <img src="/images/return.png" style="vertical-align: middle;height:25px;width:25px;">
+    </div>
+    <div class="search-container"><!--搜索框和搜索结果栏-->
+        <form method="post" class="searcher" onsubmit="return false">
+            <!--<span id="search-block">搜索栏</span>--><input id="write" type="text"><button type="button" id="search">搜索</button>
+            </br>
+        </form>
+<!--        <div class="adv-searcher">-->
+<!--            &lt;!&ndash;<button type="button" id="advanced-search">高级搜索</button>&lt;!&ndash;高级搜索按钮，支持组合tag&ndash;&gt;&ndash;&gt;-->
+<!--            <button type="button" id="get-back">返回首页</button>&lt;!&ndash;用于返回首页&ndash;&gt;-->
+<!--        </div>-->
+        <div class="table-container" id="one">
+
+        </div>
+        <div class="pages" align="center" style="margin-top:20px;margin-bottom:10px">
+            <ul class="pagination">
+                <li><a class="hide" href="#" id="firstPage"><< 首页</a></li>
+                <li><a class="hide" href="#" id="prePage">< 上一页</a></li>
+                <li><a href="#" id="nextPage">下一页 ></a></li>
+                <li><a href="#" id="lastPage">尾页 >></a></li>
+            </ul>
+        </div>
+        <div id="one1"></div>
+    </div>
+</div>
+</body>
+</html>

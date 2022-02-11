@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.oasis.dao.StatisticsMapper">
+    <select id="selectPaperByRefer" resultType="com.example.oasis.po.Paper">
+          select * from paper order by referenceCount desc limit 10;
+    </select>
+
+    <select id="selectConference" resultType="com.example.oasis.po.Conference">
+        select count(title) as value ,publicTitle as name
+        from paper group by publicTitle order by count(title) desc limit 10;
+    </select>
+
+    <select id="getMostAuthor" resultType="com.example.oasis.po.Author">
+        select author,count from (select author,affiliation,count(title) as count from authorpaper group by author,affiliation order by count desc limit 10) x
+    </select>
+
+</mapper>
