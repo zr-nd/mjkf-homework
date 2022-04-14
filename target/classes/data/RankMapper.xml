@@ -1,116 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.example.oasis.dao.RankMapper">
-    <select id="rankAllAffiliationByPapers" resultType="com.example.oasis.po.Affiliation">
+<mapper namespace="com.example.mjkf.dao.RankMapper">
+    <select id="rankAllAffiliationByPapers" resultType="com.example.mjkf.po.Affiliation">
         select name,sum(papers) as papers,sum(refs) as refs from affRank where year between #{startYear} and #{endYear} group by name order by papers desc,name
     </select>
 
-    <select id="rankAffiliationByPapersField" resultType="com.example.oasis.po.Affiliation">
-        select affiliation as name,count(refs) as papers,sum(refs) as refs from (select * from authorpaper a where a.affiliation!='NA' and a.title in (select title from paper where year between #{startYear} and #{endYear} and authorKeyWord like concat('%',#{field},'%')) group by a.affiliation,a.title) x group by name order by papers desc,name
+    <select id="rankAffiliationByPapersField" resultType="com.example.mjkf.po.Affiliation">
+        select name,sum(papers) as papers,sum(refs) as refs from affRank where year between #{startYear} and #{endYear} and keyword like concat('%',#{field},'%') group by name order by papers desc,name
     </select>
 
-    <select id="rankAffiliationByPapersConference" resultType="com.example.oasis.po.Affiliation">
+    <select id="rankAffiliationByPapersConference" resultType="com.example.mjkf.po.Affiliation">
         select name,sum(papers) as papers,sum(refs) as refs from affRank where year between #{startYear} and #{endYear} and conference=#{conference} group by name order by papers desc,name
     </select>
 
-    <select id="rankAffiliationByPapersConference2" resultType="com.example.oasis.po.Affiliation">
+    <select id="rankAffiliationByPapersConference2" resultType="com.example.mjkf.po.Affiliation">
         select name,sum(papers) as papers,sum(refs) as refs from affRank where year between #{startYear} and #{endYear} and conference=#{conference1} or conference=#{conference2} group by name order by papers desc,name
     </select>
 
-    <select id="rankAffiliationByPapersFieldConference" resultType="com.example.oasis.po.Affiliation">
-        select affiliation as name,count(refs) as papers,sum(refs) as refs from (select * from authorpaper a where a.affiliation!='NA' and a.title in (select title from paper where year between #{startYear} and #{endYear} and authorKeyWord like concat('%',#{field},'%') and publicTitle like concat('%',#{conference},'%')) group by a.affiliation,a.title) x group by name order by papers desc,name
+    <select id="rankAffiliationByPapersFieldConference" resultType="com.example.mjkf.po.Affiliation">
+        select name,sum(papers) as papers,sum(refs) as refs from affRank where year between #{startYear} and #{endYear} and keyword like concat('%',#{field},'%') and conference=#{conference} group by name order by papers desc,name
     </select>
 
-    <select id="rankAffiliationByPapersFieldConference2" resultType="com.example.oasis.po.Affiliation">
-        select affiliation as name,count(refs) as papers,sum(refs) as refs from (select * from authorpaper a where a.affiliation!='NA' and a.title in (select title from paper where year between #{startYear} and #{endYear} and authorKeyWord like concat('%',#{field},'%') and publicTitle like concat('%',#{conference1},'%') or publicTitle like concat('%',#{conference2},'%')) group by a.affiliation,a.title) x group by name order by papers desc,name
+    <select id="rankAffiliationByPapersFieldConference2" resultType="com.example.mjkf.po.Affiliation">
+        select name,sum(papers) as papers,sum(refs) as refs from affRank where year between #{startYear} and #{endYear} and keyword like concat('%',#{field},'%') and conference=#{conference1} or conference=#{conference2} group by name order by papers desc,name
     </select>
 
 
 
-    <select id="rankAllAffiliationByRefs" resultType="com.example.oasis.po.Affiliation">
+    <select id="rankAllAffiliationByRefs" resultType="com.example.mjkf.po.Affiliation">
         select name,sum(papers) as papers,sum(refs) as refs from affRank where year between #{startYear} and #{endYear} group by name order by refs desc,name
     </select>
 
-    <select id="rankAffiliationByRefsField" resultType="com.example.oasis.po.Affiliation">
-        select affiliation as name,count(refs) as papers,sum(refs) as refs from (select * from authorpaper a where a.affiliation!='NA' and a.title in (select title from paper where year between #{startYear} and #{endYear} and authorKeyWord like concat('%',#{field},'%')) group by a.affiliation,a.title) x group by name order by refs desc,name
+    <select id="rankAffiliationByRefsField" resultType="com.example.mjkf.po.Affiliation">
+        select name,sum(papers) as papers,sum(refs) as refs from affRank where year between #{startYear} and #{endYear} and keyword like concat('%',#{field},'%') group by name order by refs desc,name
     </select>
 
-    <select id="rankAffiliationByRefsConference" resultType="com.example.oasis.po.Affiliation">
+    <select id="rankAffiliationByRefsConference" resultType="com.example.mjkf.po.Affiliation">
         select name,sum(papers) as papers,sum(refs) as refs from affRank where year between #{startYear} and #{endYear} and conference=#{conference} group by name order by refs desc,name
     </select>
 
-    <select id="rankAffiliationByRefsConference2" resultType="com.example.oasis.po.Affiliation">
+    <select id="rankAffiliationByRefsConference2" resultType="com.example.mjkf.po.Affiliation">
         select name,sum(papers) as papers,sum(refs) as refs from affRank where year between #{startYear} and #{endYear} and conference=#{conference1} or conference=#{conference2} group by name order by refs desc,name
     </select>
 
-    <select id="rankAffiliationByRefsFieldConference" resultType="com.example.oasis.po.Affiliation">
-        select affiliation as name,count(refs) as papers,sum(refs) as refs from (select * from authorpaper a where a.affiliation!='NA' and a.title in (select title from paper where year between #{startYear} and #{endYear} and authorKeyWord like concat('%',#{field},'%') and publicTitle like concat('%',#{conference},'%')) group by a.affiliation,a.title) x group by name order by refs desc,name
+    <select id="rankAffiliationByRefsFieldConference" resultType="com.example.mjkf.po.Affiliation">
+        select name,sum(papers) as papers,sum(refs) as refs from affRank where year between #{startYear} and #{endYear} and keyword like concat('%',#{field},'%') and conference=#{conference} group by name order by refs desc,name
     </select>
 
-    <select id="rankAffiliationByRefsFieldConference2" resultType="com.example.oasis.po.Affiliation">
-        select affiliation as name,count(refs) as papers,sum(refs) as refs from (select * from authorpaper a where a.affiliation!='NA' and a.title in (select title from paper where year between #{startYear} and #{endYear} and authorKeyWord like concat('%',#{field},'%') and publicTitle like concat('%',#{conference1},'%') or publicTitle like concat('%',#{conference2},'%')) group by a.affiliation,a.title) x group by name order by refs desc,name
-    </select>
-
-
-
-    <select id="rankAllAuthorByPapers" resultType="com.example.oasis.po.AuthorPic">
-        select author,affiliation,sum(papers) as papers,sum(refs) as refs from authorRank where year between #{startYear} and #{endYear} group by author,affiliation order by papers desc,author
-    </select>
-
-    <select id="rankAuthorByPapersField" resultType="com.example.oasis.po.AuthorPic">
-        select author,affiliation,count(refs) as papers,sum(refs) as refs from (select * from authorpaper a where a.title in (select title from paper where year between #{startYear} and #{endYear} and authorKeyWord like concat('%',#{field},'%')) group by a.author,a.affiliation,a.title) x group by author,affiliation order by papers desc,author
-    </select>
-
-    <select id="rankAuthorByPapersConference" resultType="com.example.oasis.po.AuthorPic">
-        select author,affiliation,sum(papers) as papers,sum(refs) as refs from authorRank where year between #{startYear} and #{endYear} and conference=#{conference} group by author,affiliation order by papers desc,author
-    </select>
-
-    <select id="rankAuthorByPapersConference2" resultType="com.example.oasis.po.AuthorPic">
-        select author,affiliation,sum(papers) as papers,sum(refs) as refs from authorRank where year between #{startYear} and #{endYear} and conference=#{conference1} or conference=#{conference2} group by author,affiliation order by papers desc,author
-    </select>
-
-    <select id="rankAuthorByPapersFieldConference" resultType="com.example.oasis.po.AuthorPic">
-        select author,affiliation,count(refs) as papers,sum(refs) as refs from (select * from authorpaper a where a.title in (select title from paper where year between #{startYear} and #{endYear} and authorKeyWord like concat('%',#{field},'%') and publicTitle like concat('%',#{conference},'%')) group by a.author,a.affiliation,a.title) x group by author,affiliation order by papers desc,author
-    </select>
-
-    <select id="rankAuthorByPapersFieldConference2" resultType="com.example.oasis.po.AuthorPic">
-        select author,affiliation,count(refs) as papers,sum(refs) as refs from (select * from authorpaper a where a.title in (select title from paper where year between #{startYear} and #{endYear} and authorKeyWord like concat('%',#{field},'%') and publicTitle like concat('%',#{conference1},'%') or publicTitle like concat('%',#{conference2},'%')) group by a.author,a.affiliation,a.title) x group by author,affiliation order by papers desc,author
+    <select id="rankAffiliationByRefsFieldConference2" resultType="com.example.mjkf.po.Affiliation">
+        select name,sum(papers) as papers,sum(refs) as refs from affRank where year between #{startYear} and #{endYear} and keyword like concat('%',#{field},'%') and conference=#{conference1} or conference=#{conference2} group by name order by refs desc,name
     </select>
 
 
 
-
-    <select id="rankAllAuthorByRefs" resultType="com.example.oasis.po.AuthorPic">
-        select author,affiliation,sum(papers) as papers,sum(refs) as refs from authorRank where year between #{startYear} and #{endYear} group by author,affiliation order by refs desc,author
+    <select id="rankAllAuthorByPapers" resultType="com.example.mjkf.po.Affiliation">
+        select name,sum(papers) as papers,sum(refs) as refs from authorRank where year between #{startYear} and #{endYear} group by name order by papers desc,name
     </select>
 
-    <select id="rankAuthorByRefsField" resultType="com.example.oasis.po.AuthorPic">
-        select author,affiliation,count(refs) as papers,sum(refs) as refs from (select * from authorpaper a where a.title in (select title from paper where year between #{startYear} and #{endYear} and authorKeyWord like concat('%',#{field},'%')) group by a.author,a.affiliation,a.title) x  group by author,affiliation order by refs desc,author
+    <select id="rankAuthorByPapersField" resultType="com.example.mjkf.po.Affiliation">
+        select name,sum(papers) as papers,sum(refs) as refs from authorRank where year between #{startYear} and #{endYear} and keyword like concat('%',#{field},'%') group by name order by papers desc,name
     </select>
 
-    <select id="rankAuthorByRefsConference" resultType="com.example.oasis.po.AuthorPic">
-       select author,affiliation,sum(papers) as papers,sum(refs) as refs from authorRank where year between #{startYear} and #{endYear} and conference=#{conference} group by author,affiliation order by refs desc,author
+    <select id="rankAuthorByPapersConference" resultType="com.example.mjkf.po.Affiliation">
+        select name,sum(papers) as papers,sum(refs) as refs from authorRank where year between #{startYear} and #{endYear} and conference=#{conference} group by name order by papers desc,name
     </select>
 
-    <select id="rankAuthorByRefsConference2" resultType="com.example.oasis.po.AuthorPic">
-        select author,affiliation,sum(papers) as papers,sum(refs) as refs from authorRank where year between #{startYear} and #{endYear} and conference=#{conference1} or conference=#{conference2} group by author,affiliation order by refs desc,author
+    <select id="rankAuthorByPapersConference2" resultType="com.example.mjkf.po.Affiliation">
+        select name,sum(papers) as papers,sum(refs) as refs from authorRank where year between #{startYear} and #{endYear} and conference=#{conference1} or conference=#{conference2} group by name order by papers desc,name
     </select>
 
-    <select id="rankAuthorByRefsFieldConference" resultType="com.example.oasis.po.AuthorPic">
-        select author,affiliation,count(refs) as papers,sum(refs) as refs from (select * from authorpaper a where a.title in (select title from paper where year between #{startYear} and #{endYear} and authorKeyWord like concat('%',#{field},'%') and publicTitle like concat('%',#{conference},'%')) group by a.author,a.affiliation,a.title) x  group by author,affiliation order by refs desc,author
+    <select id="rankAuthorByPapersFieldConference" resultType="com.example.mjkf.po.Affiliation">
+        select name,sum(papers) as papers,sum(refs) as refs from authorRank where year between #{startYear} and #{endYear} and keyword like concat('%',#{field},'%') and conference=#{conference} group by name order by papers desc,name
     </select>
 
-    <select id="rankAuthorByRefsFieldConference2" resultType="com.example.oasis.po.AuthorPic">
-        select author,affiliation,count(refs) as papers,sum(refs) as refs from (select * from authorpaper a where a.title in (select title from paper where year between #{startYear} and #{endYear} and authorKeyWord like concat('%',#{field},'%') and publicTitle like concat('%',#{conference1},'%') or publicTitle like concat('%',#{conference2},'%')) group by a.author,a.affiliation,a.title) x  group by author,affiliation order by refs desc,author
+    <select id="rankAuthorByPapersFieldConference2" resultType="com.example.mjkf.po.Affiliation">
+        select name,sum(papers) as papers,sum(refs) as refs from authorRank where year between #{startYear} and #{endYear} and keyword like concat('%',#{field},'%') and conference=#{conference1} or conference=#{conference2} group by name order by papers desc,name
     </select>
 
 
-    <select id="getPublicTrend1" resultType="com.example.oasis.po.PublicTrend">
+
+
+    <select id="rankAllAuthorByRefs" resultType="com.example.mjkf.po.Affiliation">
+        select name,sum(papers) as papers,sum(refs) as refs from authorRank where year between #{startYear} and #{endYear} group by name order by refs desc,name
+    </select>
+
+    <select id="rankAuthorByRefsField" resultType="com.example.mjkf.po.Affiliation">
+        select name,sum(papers) as papers,sum(refs) as refs from authorRank where year between #{startYear} and #{endYear} and keyword like concat('%',#{field},'%') group by name order by refs desc,name
+    </select>
+
+    <select id="rankAuthorByRefsConference" resultType="com.example.mjkf.po.Affiliation">
+       select name,sum(papers) as papers,sum(refs) as refs from authorRank where year between #{startYear} and #{endYear} and conference=#{conference} group by name order by refs desc,name
+    </select>
+
+    <select id="rankAuthorByRefsConference2" resultType="com.example.mjkf.po.Affiliation">
+        select name,sum(papers) as papers,sum(refs) as refs from authorRank where year between #{startYear} and #{endYear} and conference=#{conference1} or conference=#{conference2} group by name order by refs desc,name
+    </select>
+
+    <select id="rankAuthorByRefsFieldConference" resultType="com.example.mjkf.po.Affiliation">
+        select name,sum(papers) as papers,sum(refs) as refs from authorRank where year between #{startYear} and #{endYear} and keyword like concat('%',#{field},'%') and conference=#{conference} group by name order by refs desc,name
+    </select>
+
+    <select id="rankAuthorByRefsFieldConference2" resultType="com.example.mjkf.po.Affiliation">
+        select name,sum(papers) as papers,sum(refs) as refs from authorRank where year between #{startYear} and #{endYear} and keyword like concat('%',#{field},'%') and conference=#{conference1} or conference=#{conference2} group by name order by refs desc,name
+    </select>
+
+
+    <select id="getPublicTrend1" resultType="com.example.mjkf.po.PublicTrend">
         select count,year from (select name,year,sum(papers) as count from affRank where name=#{name} and year between #{startYear} and #{endYear} group by name,year order by year) x
     </select>
 
-    <select id="getPublicTrend2" resultType="com.example.oasis.po.PublicTrend">
-        select count,year from (select author,affiliation,year,sum(papers) as count from authorRank where author=#{name} and affiliation=#{affiliation} and year between #{startYear} and #{endYear} group by author,affiliation,year order by year) x
+    <select id="getPublicTrend2" resultType="com.example.mjkf.po.PublicTrend">
+        select count,year from (select name,year,sum(papers) as count from authorRank where name=#{name} and year between #{startYear} and #{endYear} group by name,year order by year) x
     </select>
 
 </mapper>

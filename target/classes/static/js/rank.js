@@ -146,11 +146,10 @@ $(document).ready(function () {
                         if(i>=res.length)
                             break;
 
-                        data['name'] = res[i].author;
-                        data['affiliation'] = res[i].affiliation;
+                        data['name'] = res[i].name;
                         //var text="";
                         text = text + "<tr class='item'>" +
-                            "<td data-affiliation='"+res[i].affiliation+"'>" + "<img src='/images/person.png' style='height:30px;width:30px'/>" + (i + 1) + ". " + res[i].author + "</td>" +
+                            "<td><img src='/images/person.png' style='height:30px;width:30px'/>" + (i + 1) + ". " + res[i].name + "</td>" +
                             "<td>" + res[i].papers + "</td>" +
                             "<td>" + res[i].refs + "</td>" +
                             "<td><div id='trend" + (i + 1) + "'></div></td>" +

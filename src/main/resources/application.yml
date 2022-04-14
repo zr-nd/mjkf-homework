@@ -8,7 +8,7 @@ spring:
     name: newxyzzdb
     url: jdbc:mysql://localhost:3306/newxyzzdb?serverTimezone=GMT%2B8&characterEncoding=UTF-8
     username: root
-    password: root
+    password: XIao852456
     driver-class-name: com.mysql.cj.jdbc.Driver
     hikari:
       minimum-idle: 3  # 最小空闲连接数量

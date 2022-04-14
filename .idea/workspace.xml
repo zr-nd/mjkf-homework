@@ -5,22 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df48f90c-7ae8-44ee-ba4f-27d51e9e5c34" name="Default Changelist" comment="人机交互">
-      <change afterPath="$PROJECT_DIR$/../Front/Front.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back/src/main/resources/data/UserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../section4/src/main/webapp/WEB-INF/views/personForm2.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled10/untitled10.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled15/practice/src/components/Login.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled16/src/components/Home.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled16/src/components/Login.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled16/src/components/Register.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled16/src/router/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled16/src/store/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled16/vue.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled19/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled3/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled3/untitled3.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled6/untitled6.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020课程/服务计算与SOA开发/Assignment10/.idea/Assignment10.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020课程/服务计算与SOA开发/Assignment10/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020课程/服务计算与SOA开发/Assignment10/.idea/dbnavigator.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020课程/服务计算与SOA开发/Assignment10/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020课程/服务计算与SOA开发/Assignment10/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2020课程/服务计算与SOA开发/Assignment10/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front/Front.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Front/Front.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back/src/main/java/com/example/back/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back/src/main/java/com/example/back/dao/UserMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back/src/main/java/com/example/back/po/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back/src/main/java/com/example/back/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back/src/main/java/com/example/back/serviceImpl/UserServicelmpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back/src/main/java/com/example/back/vo/ResponseVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back/src/main/java/com/example/back/vo/UserVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back/src/main/resources/data/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../back/src/main/resources/data/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back/src/main/resources/templates/Login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back/src/test/java/com/example/back/controller/UserControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../section4/src/main/webapp/WEB-INF/views/personForm2.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../section4/src/main/webapp/WEB-INF/views/personForm2.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled1/src/SelectData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled1/src/selectTable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled15/practice/src/components/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled15/practice/src/components/Login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled16/src/components/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled16/src/components/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled16/src/components/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled16/src/components/Login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled16/src/components/Register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled16/src/components/Register.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled16/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled16/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled16/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled16/src/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled16/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled16/vue.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled19/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled19/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled3/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled3/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled3/untitled3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled3/untitled3.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +54,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -136,12 +158,14 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunManager">
-    <configuration name="OasisApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="oasis" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.oasis.OasisApplication" />
+    <configuration name="MjkfApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="mjkf" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.mjkf.MjkfApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -171,7 +195,16 @@
       <workItem from="1637154754107" duration="24000" />
       <workItem from="1644489912379" duration="425000" />
       <workItem from="1644490370689" duration="1112000" />
-      <workItem from="1644569094529" duration="397000" />
+      <workItem from="1644569094529" duration="1841000" />
+      <workItem from="1644590743503" duration="2154000" />
+      <workItem from="1644643025234" duration="3429000" />
+      <workItem from="1644808248871" duration="645000" />
+      <workItem from="1644823811946" duration="13000" />
+      <workItem from="1644831748718" duration="931000" />
+      <workItem from="1644835708795" duration="106000" />
+      <workItem from="1644888914920" duration="11000" />
+      <workItem from="1644891803886" duration="5000" />
+      <workItem from="1649897354108" duration="12194000" />
     </task>
     <task id="LOCAL-00001" summary="人机交互">
       <created>1609419888876</created>
@@ -231,6 +264,21 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="人机交互" />
     <option name="LAST_COMMIT_MESSAGE" value="人机交互" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/mjkf/serviceImpl/Rank.java</url>
+          <line>148</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/images/link2.JPG">

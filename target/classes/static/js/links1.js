@@ -13,7 +13,9 @@ $(document).ready(function () {
             async: true,
             contentType: 'application/json',
             processData: false,
+            dataType:"json",
             success: function (res) {
+                alert("成功")
                 nodes=res.nodesList;
                 links=res.linksList;
                 categoryArray=[{name:"作者"},{name:"机构"},{name:"研究方向"}];

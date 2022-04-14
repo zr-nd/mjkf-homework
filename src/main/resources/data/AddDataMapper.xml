@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.example.oasis.dao.AddDataMapper">
-    <select id="selectByTitleAndAuthors" resultType="com.example.oasis.po.Paper">
+<mapper namespace="com.example.mjkf.dao.AddDataMapper">
+    <select id="selectByTitleAndAuthors" resultType="com.example.mjkf.po.Paper">
       select * from paper where title = #{title} and authors = #{authors}
     </select>
 
